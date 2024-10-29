@@ -1,11 +1,11 @@
 pipeline {
-    agent { node { label 'agent' } } 
+    agent { node { label 'copper' } } 
     stages {
         stage("Build") {
             when {
                 beforeAgent true
                 anyOf {
-                    branch "master"
+                    branch "main"
                     buildingTag()
                 }
             }
